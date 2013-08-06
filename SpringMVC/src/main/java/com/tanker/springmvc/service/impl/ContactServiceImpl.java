@@ -2,6 +2,7 @@ package com.tanker.springmvc.service.impl;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import com.tanker.springmvc.dao.ContactDao;
 import com.tanker.springmvc.form.Contact;
@@ -14,6 +15,7 @@ public class ContactServiceImpl implements ContactService {
 	private ContactDao contactDao;
 	
 	@Override
+	@Transactional
 	public void addContact(Contact contact) {
 		contactDao.addContact(contact);
 		System.out.println("service");

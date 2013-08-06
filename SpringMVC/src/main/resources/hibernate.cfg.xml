@@ -7,5 +7,5 @@
     <session-factory>
         <mapping class="com.tanker.springmvc.form.Contact" />
     </session-factory>
-         
+    <property name="current_session_context_class">org.hibernate.context.ThreadLocalSessionContext</property>
 </hibernate-configuration>
